@@ -28,8 +28,8 @@ func min(x, y int) int {
 }
 
 func hasThreeDigitFactors(n int) bool {
-	for i := max(n / 999, 100); i <= min(n / 100, 999); i++ {
-		if n % i == 0 {
+	for i := max(n/999, 100); i <= min(n/100, 999); i++ {
+		if n%i == 0 {
 			return true
 		}
 	}
@@ -41,7 +41,7 @@ func main() {
 	for outer := 9; outer >= 0; outer-- {
 		for middle := 9; middle >= 0; middle-- {
 			for inner := 9; inner >= 0; inner-- {
-				n := outer * 100001 + middle * 10010 + inner * 1100
+				n := outer*100001 + middle*10010 + inner*1100
 				if hasThreeDigitFactors(n) {
 					fmt.Println(n)
 					return

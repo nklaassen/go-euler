@@ -13,7 +13,7 @@ What is the 10 001st prime number?
 
 func log2(n int) int {
 	for i := uint(31); i >= 0; i-- {
-		if n & (1 << i) != 0 {
+		if n&(1<<i) != 0 {
 			return int(i)
 		}
 	}
@@ -24,7 +24,7 @@ func main() {
 	n := 10001
 
 	// use the sieve of eratosthenes
-	size := 2 * n * log2(n) // this is a guess, turns out to be okay
+	size := 2 * n * log2(n)          // this is a guess, turns out to be okay
 	composites := make([]bool, size) // keep a slice of composite numbers to take advantage of zero-values
 	numPrimes := 0
 	for i := 2; i < size; i++ {
