@@ -74,10 +74,10 @@ func main() {
 	// Was tempted to use a sliding product of 13 digits, multiplying the new digit and dividing by the old,
 	// but multiplication/division by 0 messes that up. This works fine.
 	max := 0
-	for i := 0; i < size - productSize; i++ {
+	for i := 0; i < size-productSize; i++ {
 		product := 1
 		for j := 0; j < productSize; j++ {
-			product *= digitArray[i + j]
+			product *= digitArray[i+j]
 		}
 		max = maxInt(max, product)
 	}
