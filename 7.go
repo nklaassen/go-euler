@@ -34,7 +34,7 @@ func main() {
 				fmt.Println(i)
 				return
 			}
-			for j := 2 * i; j < size; j += i {
+			for j := i * i; j < size; j += i {
 				composites[j] = true
 			}
 		}
